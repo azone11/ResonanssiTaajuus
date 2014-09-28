@@ -64,14 +64,18 @@ namespace ResonanssiTaajuusDesktop
             return currentI;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void draw_graph(Int16 selectedValue)
         {
             chart1.Series["Series1"].Points.AddXY("test", selectedValue);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (var series in chart1.Series)
+            {
+                series.Points.Clear();
+            }
+            trackBar1.Value = trackBar1.Minimum;
         }
     }
 }
