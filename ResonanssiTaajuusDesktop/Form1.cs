@@ -43,8 +43,8 @@ namespace ResonanssiTaajuusDesktop
             Int16 freqVal = (Int16)trackBar1.Value;
             double currentI = calculate_current((double)freqVal);
             chart1.Series["Series1"].Points.AddXY(freqVal, currentI);
-            textBox1.Text = "" + freqVal;
-            textBox2.Text = "" + currentI;
+            textBox1.Text = "taajuus " + freqVal + " Hz";
+            textBox2.Text = "virta " + Math.Round(currentI, 3) + " A";
         }
 
         private double calculate_current(double freq)

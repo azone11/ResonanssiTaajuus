@@ -196,4 +196,7 @@
         AKID4QKA6EC4ACA6EC4AiA6ECwCiA+ECgOhAuAAgMpLkX1L5IC6K5A/YAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Vaihtovirran taajuutta säädetään liukusäätimellä, jolloin piirissä kulkevan tehollisen virran suuruus muuttuu oheisen kuvaajan mukaan. Kun virta on suurimmillaan, niin sitä vastaava taajuus on nimeltään resonanssitaajuus.</value>
+  </data>
 </root>
