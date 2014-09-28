@@ -197,7 +197,7 @@
 </value>
   </data>
   <data name="descriptionText.Text" xml:space="preserve">
-    <value>Vaihtovirran taajuutta säädetään liukusäätimellä, jolloin piirissä kulkevan tehollisen virran suuruus muuttuu oheisen kuvaajan mukaan. Kun virta on suurimmillaan, niin sitä vastaava taajuus on nimeltään resonanssitaajuus.</value>
+    <value>Vaihtovirran taajuutta säädetään liukusäätimellä, jolloin piirissä kulkevan tehollisen virran suuruus muuttuu oheisen kuvaajan mukaan. Kun virta on suurimmillaan, niin sitä vastaava taajuus on nimeltään resonanssitaajuus. Sähköistä resonanssia hyödynnetään muunmuassa värähtelypiirissä.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
