@@ -18,12 +18,12 @@ namespace ResonanssiTaajuusDesktop
         public Form1()
         {
             InitializeComponent();
-            trackBar1.ValueChanged += 
+            trackBarFreq.ValueChanged += 
 			new System.EventHandler(TrackBar1_ValueChanged);
-		    this.Controls.Add(this.trackBar1);
+		    this.Controls.Add(this.trackBarFreq);
             chart1.Series["Series1"].ChartType = 
                 System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            InitChart(trackBar1.Minimum, trackBar1.Maximum, trackBar1.TickFrequency);
+            InitChart(trackBarFreq.Minimum, trackBarFreq.Maximum, trackBarFreq.TickFrequency);
         }
 
         private void InitChart(int min, int max, int tick)
@@ -40,11 +40,11 @@ namespace ResonanssiTaajuusDesktop
         // TextBox1 based on the TrackBar value.   
         private void TrackBar1_ValueChanged(object sender, System.EventArgs e)
         {
-            Int16 freqVal = (Int16)trackBar1.Value;
+            Int16 freqVal = (Int16)trackBarFreq.Value;
             double currentI = calculate_current((double)freqVal);
             chart1.Series["Series1"].Points.AddXY(freqVal, currentI);
-            textBox1.Text = "taajuus " + freqVal + " Hz";
-            textBox2.Text = "virta " + Math.Round(currentI, 3) + " A";
+            textBoxFreq.Text = "taajuus " + freqVal + " Hz";
+            textBoxAmper.Text = "virta " + Math.Round(currentI, 3) + " A";
         }
 
         private double calculate_current(double freq)
@@ -77,8 +77,8 @@ namespace ResonanssiTaajuusDesktop
             {
                 series.Points.Clear();
             }
-            trackBar1.Value = trackBar1.Minimum;
-            InitChart(trackBar1.Minimum, trackBar1.Maximum, trackBar1.TickFrequency);
+            trackBarFreq.Value = trackBarFreq.Minimum;
+            InitChart(trackBarFreq.Minimum, trackBarFreq.Maximum, trackBarFreq.TickFrequency);
         }
     }
 }
