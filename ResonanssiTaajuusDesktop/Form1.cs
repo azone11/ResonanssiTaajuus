@@ -23,15 +23,18 @@ namespace ResonanssiTaajuusDesktop
 		    this.Controls.Add(this.trackBar1);
             chart1.Series["Series1"].ChartType = 
                 System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            int i = trackBar1.Minimum;
-            int tick = trackBar1.TickFrequency;
-            while(i <= trackBar1.Maximum)
+            InitChart(trackBar1.Minimum, trackBar1.Maximum, trackBar1.TickFrequency);
+        }
+
+        private void InitChart(int min, int max, int tick)
+        {
+            int i = min;
+            while (i <= max)
             {
                 chart1.Series["Series1"].Points.AddXY(i, 0);
                 i = i + tick;
             }
         }
-
 
         // Handle the TrackBar.ValueChanged event by calculating a value for 
         // TextBox1 based on the TrackBar value.   
@@ -39,7 +42,6 @@ namespace ResonanssiTaajuusDesktop
         {
             Int16 freqVal = (Int16)trackBar1.Value;
             double currentI = calculate_current((double)freqVal);
-            //TextBox1.Text = (System.Math.Round(TrackBar1.Value / 10.0)).ToString();
             chart1.Series["Series1"].Points.AddXY(freqVal, currentI);
             textBox1.Text = "" + freqVal;
             textBox2.Text = "" + currentI;
@@ -76,6 +78,7 @@ namespace ResonanssiTaajuusDesktop
                 series.Points.Clear();
             }
             trackBar1.Value = trackBar1.Minimum;
+            InitChart(trackBar1.Minimum, trackBar1.Maximum, trackBar1.TickFrequency);
         }
     }
 }
