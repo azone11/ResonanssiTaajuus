@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonClearAll = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -42,9 +42,15 @@
             this.textBoxMaxFreq = new System.Windows.Forms.TextBox();
             this.descriptionText = new System.Windows.Forms.RichTextBox();
             this.titleText = new System.Windows.Forms.RichTextBox();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonClearAll
@@ -59,18 +65,18 @@
             // 
             // chart1
             // 
-            chartArea2.AxisX.Maximum = 10000D;
-            chartArea2.AxisY.Maximum = 0.6D;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea6.AxisX.Maximum = 10000D;
+            chartArea6.AxisY.Maximum = 0.6D;
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(12, 225);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(300, 202);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
@@ -116,7 +122,7 @@
             // pictureBoxDiagram
             // 
             this.pictureBoxDiagram.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiagram.Image")));
-            this.pictureBoxDiagram.Location = new System.Drawing.Point(193, 50);
+            this.pictureBoxDiagram.Location = new System.Drawing.Point(12, 38);
             this.pictureBoxDiagram.Name = "pictureBoxDiagram";
             this.pictureBoxDiagram.Size = new System.Drawing.Size(267, 137);
             this.pictureBoxDiagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,11 +157,12 @@
             // 
             this.descriptionText.BackColor = System.Drawing.Color.White;
             this.descriptionText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionText.Location = new System.Drawing.Point(12, 50);
+            this.descriptionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionText.Location = new System.Drawing.Point(466, 206);
             this.descriptionText.Name = "descriptionText";
             this.descriptionText.ReadOnly = true;
             this.descriptionText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.descriptionText.Size = new System.Drawing.Size(175, 137);
+            this.descriptionText.Size = new System.Drawing.Size(227, 214);
             this.descriptionText.TabIndex = 12;
             this.descriptionText.Text = resources.GetString("descriptionText.Text");
             // 
@@ -163,12 +170,59 @@
             // 
             this.titleText.BackColor = System.Drawing.Color.White;
             this.titleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.titleText.Location = new System.Drawing.Point(12, 13);
+            this.titleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleText.Location = new System.Drawing.Point(12, 12);
             this.titleText.Name = "titleText";
             this.titleText.ReadOnly = true;
-            this.titleText.Size = new System.Drawing.Size(263, 19);
+            this.titleText.Size = new System.Drawing.Size(338, 19);
             this.titleText.TabIndex = 13;
             this.titleText.Text = "Resonanssitaajuuden etsiminen RCL-sarjapiiristä";
+            // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Image = global::ResonanssiTaajuusDesktop.Properties.Resources.WP_20140929_14_19_03_Smart;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(347, 38);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(241, 137);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPhoto.TabIndex = 14;
+            this.pictureBoxPhoto.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(282, 71);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(59, 13);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "R1 = 40 Ω";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(282, 90);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(59, 13);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Text = "L1 = 2 mH";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(282, 109);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(59, 13);
+            this.textBox3.TabIndex = 17;
+            this.textBox3.Text = "C1 = 5 μF";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Location = new System.Drawing.Point(282, 128);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(59, 13);
+            this.textBox4.TabIndex = 18;
+            this.textBox4.Text = "U = 20 V";
             // 
             // Form1
             // 
@@ -176,7 +230,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(472, 432);
+            this.ClientSize = new System.Drawing.Size(696, 432);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBoxPhoto);
             this.Controls.Add(this.titleText);
             this.Controls.Add(this.descriptionText);
             this.Controls.Add(this.textBoxMaxFreq);
@@ -188,12 +247,14 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.buttonClearAll);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Resonanssitaajuus";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFreq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +272,11 @@
         private System.Windows.Forms.TextBox textBoxMaxFreq;
         private System.Windows.Forms.RichTextBox descriptionText;
         private System.Windows.Forms.RichTextBox titleText;
+        private System.Windows.Forms.PictureBox pictureBoxPhoto;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
